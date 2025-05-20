@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>DS2002 Data Science Systems I - UVA Spring 2024</title>
+    <link rel="stylesheet" href="https://nmagee.github.io/ds2002/stylesheets/styles.css">
+    <link rel="stylesheet" href="https://nmagee.github.io/ds2002/stylesheets/github-light.css">
+    <link rel="Shortcut Icon" href="https://www.rc.virginia.edu/images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="https://nmagee.github.io/ds2002/" style="color:black;text-decoration:none;">DS2002 Data Science Systems I</a></h1>
+        <p>Neal Magee, Ph.D.<br />Associate Professor, Data Science<br />University of Virginia, Spring 2024</p>
+
+        <div style="min-height:2rem;"></div>
+
+        <ul>
+          <li><a href="https://nmagee.github.io/ds2002/schedule/">View the<strong>Schedule</strong></a></li>
+          <li><a href="https://canvas.its.virginia.edu/courses/105117" target="_new">Course LMS<strong>Canvas</strong></a></li>
+          <li><a href="https://github.com/nmagee/ds2002-course/" target="_new">Course Code<strong>GitHub</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="https://canvas.its.virginia.edu/courses/105117/assignments" target="_new">Full list of <strong>Labs</strong></a></li>
+          <li><a href="https://awsacademy.instructure.com/" target="_new">Hands-on <strong>AWS</strong></a></li>
+          <li><a href="https://console.aws.amazon.com/" target="_new">AWS<strong>Console</strong></a></li>
+        </ul>
+      </header>
+
+<section>
+
+<h2><a id="description" class="anchor" href="#description" name="description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Course Description</h2>
+
+<p>This course exposes students to the essential technical concepts and skills for designing and running data science workloads. Students will be equipped to select and manage computing environments and storage options large and small. They will also learn methods for software delivery, scaling for larger jobs, and the essential database models for data storage and data analysis.</p>
+<p>Students in this course will become much more familiar with the command-line interface, scripting and managing code, and creating/managing local and cloud-based resources. A central goal of the course is to equip students in the technical aspects of their later work in data science, so that students have a wide range of tools, techniques, and skills for processing a variety of workloads.</p>
+<ul>
+  <li><a href="#audience" style="text-decoration:none;color:black;">Audience</a></li>
+  <li><a href="#grading" style="text-decoration:none;color:black;">Resources & Requirements</a></li>
+  <li><a href="#office-hours" style="text-decoration:none;color:black;">Office Hours</a></li>  
+  <li><a href="#policies" style="text-decoration:none;color:black;">Policies</a></li>
+  <li><a href="#other" style="text-decoration:none;color:black;">Other Details</a></li>
+</ul>
+
+<h2><a id="audience" class="anchor" href="#audience" name="audience" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Audience</h2>
+<p>This course emphasizes hands-on experience with the creation, management, and consumption of various  services and systems that support the practice of data science. For the purposes of getting started I will assume that you fit roughly into at least one of three categories as you approach the subject:</p>
+<ol>
+  <li>Data Scientist / Researcher</li>
+  <li>Developer / CS</li>
+  <li>Data Engineer / Systems</li>
+</ol>
+<p>Students will learn how to implement data science systems according to best practices, with an emphasis upon creating reusable and portable environments.</p>
+
+<h2><a id="grading" class="anchor" href="#grading" name="grading" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources & Requirements</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Weight</th>
+      <th>Notes / Due</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://virginia.az1.qualtrics.com/jfe/form/SV_2o9g4mLR8vBBuNU" target="_new">Student Survey</a> & other setup</td>
+      <td></td>
+      <td>First week of class</td>
+    </tr>
+    <tr>
+      <td>Readings and other material</td>
+      <td></td>
+      <td>Weekly before class</td>
+    </tr>
+    <tr>
+      <td><a href="https://canvas.its.virginia.edu/courses/105117/assignments" target="_new">Labs</a></td>
+      <td>10%</td>
+      <td>Complete 10 required labs / 1 point each</td>
+    </tr>
+    <tr>
+      <td>Quizzes</td>
+      <td>40%</td>
+      <td>4 quizzes / 10 points each</td>
+    </tr>
+    <tr>
+      <td>Data Projects</td>
+      <td>50%</td>
+      <td>3 projects / ~17 points each</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><b>Student Survey</b> - A simple questionnaire to ascertain baseline skills for the class and students' familiarity with a variety of tools and concepts.
+  <li><b>Readings / Materials</b> - Will be posted beforehand. Though not a graded portion of the course, readings and supporting material have been carefully selected to introduce and explain important concepts to you. Should you not digest these you will likely not perform well in the course. Links will remain posted for the entire semester.
+  <li><b>Attendance</b> - Regular attendance of this class is required. Therefore, you will frequently be asked to sign in when instructed in the classroom.
+  <li><b>Labs</b> - Are an important way for you to interact with tools and course concepts. In most cases these will be in Amazon Web Services or on your local workstation. Labs will either be hosted in AWS Academy (and incur no charges) or are designed to cost very little if you prefer to use your own AWS account (a couple of dollars at most). Students are encouraged to complete as many labs as possible in order to gain competency in the subject matter. There will be ten (10) required labs for the course; optional labs will also be available.
+  <li><b>Quizzes</b> -  Will be short, multiple-choice assessments of your understanding of the material. These will be given periodically during the semester.
+  <li><b>Data Projects</b> - Are graded assignments that implement your understanding of course material. DPs will be posted one week before due. There is no time limit on DPs but they must be completed alone, without support of other students or outsiders. Given the full week allowed to work on these assignments, late work will not be accepted.
+</ul>
+
+<h3>Grading Scale</h3>
+
+<div style="width:100%;">
+<div style="float:left;">
+<table style="margin-left:4rem;width:200px;">
+  <thead>
+    <tr>
+      <th>Grade</th>
+      <th>Point Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>A</td>
+      <td>94-100</td>
+    </tr>
+    <tr>
+      <td>A-</td>
+      <td>90-93</td>
+    </tr>
+    <tr>
+      <td>B+</td>
+      <td>87-89</td>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>84-86</td>
+    </tr>
+    <tr>
+      <td>B-</td>
+      <td>80-83</td>
+    </tr>
+    <tr>
+      <td>C+</td>
+      <td>77-79</td>
+    </tr>
+  </tbody>
+</table>
+</div><div style="margin-left:4rem;padding-left:4rem;">
+<table style="padding-left:4rem;width:200px;">
+  <thead>
+    <tr>
+      <th>Grade</th>
+      <th>Point Range</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>C</td>
+      <td>74-76</td>
+    </tr>
+    <tr>
+      <td>C-</td>
+      <td>70-73</td>
+    </tr>
+    <tr>
+      <td>D+</td>
+      <td>67-69</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td>64-66</td>
+    </tr>
+    <tr>
+      <td>D-</td>
+      <td>60-63</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td>=<59</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+
+<h2>
+  <a id="office-hours" name="office-hours" class="anchor" href="#office-hours" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Office Hours</h2>
+  <p>Will be held weekly. Time and location TBD.</p>
+
+<hr size=1 />
+<h2><a id="policies" href="#policies" class="anchor" name="policies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Policies</h2>
+
+<h3>Late Work </h3>
+<p>Late work will receive a maximum of 50% possible points, except in cases of emergency. (Excusable cases are serious illness or family emergencies.) If you are aware of a scheduling conflict before a specific due date, such as a team sports or university event, arrangements can be made <i>beforehand</i> to submit your material at a different time.</p>
+
+<h3>University of Virginia Honor System </h3>
+<p>This course is governed by the UVA honor code policy. If you are unfamiliar with this policy or have questions, please contact me. In particular, you are expected to do your own work and not to provide assistance to others on individual activities. Plagiarism or copying code or solutions (or using AI-based LLMs, etc.) even with attribution, is considered cheating. Course materials should not be shared or distributed outside this class. For more information, visit <a href="https://www.virginia.edu/honor">www.virginia.edu/honor</a>.</p> <p>All submissions associated with your computing ID is considered to be your work and is assumed to adhere to this policy.</p>
+
+<h3>SDAC and Other Special Accommodations </h3> 
+<p>If you have been identified as a Student Disability Access Center (SDAC) student, please let the Center know you are taking this class. If you suspect you should be an SDAC student, please schedule an appointment with them for an evaluation. I happily and discretely provide the recommended accommodations for those students identified by the SDAC. Please contact your instructor one week before an exam so we can make appropriate accommodations. Website: <a href="https://www.studenthealth.virginia.edu/sdac">www.studenthealth.virginia.edu/sdac</a>.</p> <p>If you are affected by a situation that falls within issues addressed by the SDAC and the instructor and staff are not informed about this in advance, this prevents us from helping during the semester, and it is unfair to request special considerations at the end of the term or after work is completed. We request you inform the instructor as early in the term as possible your circumstances. If you have other special circumstances (athletics, other university-related activities, etc.) please contact your instructor and/or TA as soon as you know these may affect you in class.</p>
+
+<h3>Student Mental Health and Wellbeing </h3>
+<p>The University of Virginia is committed to advancing the mental health and wellbeing of its students, while acknowledging that a variety of issues, such as strained relationships, increased anxiety, alcohol/drug problems, and depression, directly impacts students’ academic performance. If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available. For help, contact Counseling and Psychological Services (CAPS) at 434-243-5150 Monday-Friday, 8:00am-4:30pm and after-hours including weekends and holidays. For a comprehensive list of services provided by CAPS including individual therapy, group therapy, crisis services, and Outreach and Consultation, visit <a href="https://www.studenthealth.virginia.edu/caps">www.studenthealth.virginia.edu/caps</a>.</p> <p>For a list of online resources students may access independently, visit <a href="https://www.studenthealth.virginia.edu/caps-online-resources">www.studenthealth.virginia.edu/caps-online-resources</a>.</p> <p>For access to community mental health referrals, visit <a href="https://www.studenthealth.virginia.edu/community-referrals">www.studenthealth.virginia.edu/community-referrals</a>.</p>
+
+<h3>Diversity and Inclusion </h3>
+<p>The School of Data Science expects everyone to contribute to an inclusive and respectful classroom culture that reflects the School’s commitment to being a space in which you can find a sense of shared community. The diversity (referring to the multiple ways that we identify ourselves, including but not limited to race, color, national origin, language, sex, disability, age, sexual orientation, gender identity, religion, creed, ancestry, belief, veteran status, or genetic information) of our classroom is a strength. You are expected to respectfully embrace the opportunity to engage, collaborate, and learn with/from a diverse team of classmates.</p> <p>Additionally, I will note that it is possible that, even though our course material is primarily scientific in nature, there may be covert biases in the material due to the lens with which it was written. I welcome feedback and suggestions to improve upon the inclusivity of the material. We are all responsible for ensuring that our actions/experience align with our stated values. Please consider yourselves to be my accountability partners in creating an inclusive environment that supports a diversity of perspectives, do not hesitate to reach out if you have concerns, ideas, or questions about your experience.</p> <p>As part of our shared effort to promote a classroom culture of inclusion, we will each have the opportunity to indicate our preferred name and pronouns. I will do my best to refer to all students accordingly.</p> 
+<p>If you find yourself in need of additional support, please consider the following resources:</p> 
+<ul> 
+  <li>SDS Associate Dean for DEI, Siri Russell <a href="mailto:ssr5v@virginia.edu">ssr5v@virginia.edu</a></li> 
+  <li>UVA Just Report It <a href="https://justreportit.sites.virginia.edu/">justreportit.sites.virginia.edu</a></li>
+</ul> 
+
+<h3>Religious accommodations </h3>
+<p>It is the University’s long-standing policy and practice to reasonably accommodate students so that they do not experience an adverse academic consequence when sincerely held religious beliefs or observances conflict with academic requirements. Students who wish to request academic accommodation for a religious observance should submit their request in writing directly to me as far in advance as possible. Students who have questions or concerns about academic accommodations for religious observance or religious beliefs may contact the University’s Office for Equal Opportunity and Civil Rights (EOCR) at UVAEOCR@virginia.edu or 434-924-3200.</p>
+
+<h3>Student Safety and Title IX </h3>
+<p>The University of Virginia is dedicated to providing a safe and equitable learning environment for all students. To that end, it is vital that you know two values that we and the University hold as critically important:</p> <ol> <li>Power-based personal violence will not be tolerated.</li> <li>Everyone has a responsibility to do their part to maintain a safe community on Grounds.</li> </ol> <p>If you or someone you know has been affected by power-based personal violence, more information can be found on the UVA <a href="https://eocr.virginia.edu/title-ix">Sexual Violence website</a>, which describes reporting options and resources available.</p> <p>As your professors, know that we care about you and your well-being and stand ready to provide support and resources as we can. As a faculty member, we are responsible employees, which means that we are required by University policy and federal law to report what you tell us to the University’s Title IX Coordinator. The Title IX Coordinator’s job is to ensure that the reporting student receives the resources and support that they need, while also reviewing the information presented to determine whether further action is necessary to ensure survivor safety and the safety of the University community. If you would rather keep this information confidential, there are <a href="https://eocr.virginia.edu/confidential-employees-and-confidential-resources">Confidential Employees</a> you can talk to on Grounds.</p> <p>There are also other University of Virginia resources available. As noted above, the Student Health Center offers Counseling and Psychological Services (CAPS) for its students. Call 434-243-5150 (or 434-972-7004 for after hours and weekend crisis assistance) to get started and schedule an appointment. If you prefer to speak anonymously and confidentially over the phone, call <a href="http://www.helplineuva.com/">Madison House’s HELP Line</a> at any hour of any day: 434-295-8255.</p> <p>If you or someone you know is struggling with gender, sexual, or domestic violence, there are many community and University of Virginia resources available. The Office of the Dean of Students, Sexual Assault Resource Agency (SARA), Shelter for Help in Emergency (SHE), and UVA Women’s Center are ready and eager to help. Contact the Director of Sexual and Domestic Violence Services at 434-982-2774.</p>
+
+<h3>Using ChatGPT and other Generative-AI </h3>
+<p>I have no prohibition on you using ChatGPT or other LLMs to provide you with longer explanations of concepts, to tutor you, or to quiz you and test your learning. I would actually encourage all of that.</p> <p>ChatGPT can provide you detailed answers that are quick and fairly comprehensive. However, at this point in learning two new languages and the basic techniques for programming, <strong>you are not going to be able to determine when ChatGPT is incorrect or giving only part of a correct answer</strong>. This means your understanding of the topic is on the losing end of that equation. <strong>Assessments in this course are closed to outside material and resources such as LLMs.</strong></p> <p>So learn and grapple with the material, tutor and quiz yourself using LLMs, and use them as a study partner. Do not use them to generate or revise answers on quizzes.</p>
+
+<hr size=1 />
+
+<h2><a id="other" class="anchor" href="#other" name="other" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Other Details</h2>
+<ul>
+  <li>Students are expected to complete every reading and attend every lecture. Failure to do so will undoubtedly leave gaps in your understanding of the subject, and the specifics required for assignments and exams.</li>
+  <li>You should never wait until the last minute to work on any aspect of this class. Computers and software can crash, and websites can have temporary outages. Keep close to the class schedule for readings, lectures, and assignments.</li>
+  <li>This syllabus is subject to modification.</li>
+</ul>
+
+</section>
+
+  <footer>
+    <p>This project is maintained by <a href="https://github.com/nmagee">nmagee</a></p>
+    <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+  </footer>
+</div>
+<script src="https://nmagee.github.io/ds2002/javascripts/scale.fix.js"></script>
+</body>
+</html>
