@@ -28,8 +28,17 @@ def count_events_for_hour(hour):
 @task
 def combine_counts(hourly_counts):
     # Total counts by type and order them
-    # print those to screen and return them
-    pass
+    totals = Counter()
+    try:
+        for counts in hourly_counts:          # each item is one hour's {event_type: count}
+            totals.update(counts)             # update() on a Counter ADDS counts
+        ordered = dict(totals.most_common())  # sort by count, highest first
+    except Exception as e:
+        print(f"combine failed: {e}")
+        raise
+    for event_type, n in ordered.items():
+        print(f"{event_type}: {n}")
+    return ordered
 
 
 @flow(log_prints=True)
