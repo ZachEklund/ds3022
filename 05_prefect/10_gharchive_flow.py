@@ -11,11 +11,16 @@ URL = "https://data.gharchive.org/2025-01-01-{hour}.json.gz"
 @task(retries=3)
 def count_events_for_hour(hour):
     # stream one hourly file and return {event_type: count}
-    # use a Counter named "counts" and pull out the "type"
-    # for each line in the stream
-    with requests.get(URL.format(hour=hour), stream=True) as r:
-        # do things
-        print("nothing")
+    counts = Counter()
+    try:
+        with requests.get(URL.format(hour=hour), stream=True, timeout=30) as r:
+            r.raise_for_status()                      # 4xx/5xx -> exception -> Prefect retry
+            with gzip.GzipFile(fileobj=r.raw) as f:   # decompress while streaming
+                for line in f:                        # one JSON event per line
+                    counts[json.loads(line)["type"]] += 1
+    except Exception as e:
+        print(f"hour {hour} failed: {e}")
+        raise                                         # re-raise so retries still fire
     print(f"hour {hour}: {counts.total()} events")
     return dict(counts)
 
