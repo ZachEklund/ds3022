@@ -14,6 +14,7 @@ __pycache__/
 *.duckdb
 *.duckdb.wal
 *.db
+*.db.wal
 
 # data in general
 05_prefect/nyc_taxi_data/
